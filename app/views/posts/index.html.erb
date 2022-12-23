@@ -13,12 +13,14 @@
 <br>
   <ul>
     <% @posts.each do |post|  %>
-      <% if post.user_id == "Karine" %>
+      <% if post.title ==  "Les consommateurs américains inquiets de l'exploitation de leurs données personnelles" %>
         <%= image = "e1mwaajrjnlgqoqnotdp" %>
-        <% elsif post.user_id == "Valeria"%>
-          <%= image = "e1mwaajrjnlgqoqnotdp" %>
+        <% elsif post.title == "Les pénuries de composants sont en phase de résolution" %>
+          <%= image = "adi-goldstein-EUsVwEOsblE-unsplash_rfkn1w" %>
+        <% elsif post.title == "Le Zero Trust, un modèle à explorer" %>%
+          <%= image ="brooke-cagle-g1Kr4Ozfoac-unsplash_vh5n58" %>
         <% else %>
-          <%= image = "e1mwaajrjnlgqoqnotdp" %>
+          <%= image = "luca-bravo-XJXWbfSo2f0-unsplash_dwndza" %>
       <% end %>
       <li>
         <%= link_to posts_path(post) do %>
@@ -26,10 +28,12 @@
           <%= cl_image_tag image, alt: "alttext", width: 300, height: 300, crop: :fill %>
           <div class="card-product-infos">
             <div>
-              <h2><%= post.title %> - <%= post.content %></h2>
+              <h2><%= post.title %></h2>
+              <h3><%= post.content %></h3>
             </div>
-            <h2 class="card-trip-pricing">$<%= post.url %></h2>
+            <h4><%= post.url %></h4>
           </div>
+          <cr>
         </div>
         <% end %>
       </li>
