@@ -7,11 +7,6 @@
 </div>
 <br>
 <br>
-<a>
-  <%= link_to "Publier votre commentaire", posts_path, class: "btn btn-gradient" %>
-</a>
-<br>
-<br>
   <ul>
     <% @posts.each do |post|  %>
       <% if post.title ==  "Les consommateurs américains inquiets de l'exploitation de leurs données personnelles" %>
@@ -31,8 +26,14 @@
               <h2><%=post.title %></h2>
               <h3><%=post.content %></h3>
             </div>
+
             <%= link_to posts_path(post) do %>
               <h4><%=post.url %></h4>
+              <a>
+              <br>
+              <%= link_to "Publier votre commentaire", new_comment_path, class: "btn btn-gradient" %>
+              </a>
+              <br>
             <% end %>
           </div>
           <cr>
