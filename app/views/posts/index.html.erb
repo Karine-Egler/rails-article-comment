@@ -22,9 +22,9 @@
       <% end %>
       <li>
         <%= link_to posts_path(post) do %>
-        <div class="card-trip">
+        <div class="card-product">
           <%= cl_image_tag image, alt: "alttext", width: 300, height: 300, crop: :fill %>
-          <div class="card-trip-infos">
+          <div class="card-product-infos">
             <div>
               <h2><%= post.title %> - <%= post.content %></h2>
             </div>
