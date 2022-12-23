@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   color:black;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-family: Roboto, Helvetica, sans-serif;
 }
 
 .card-product img {
@@ -16,18 +16,22 @@
 }
 
 .card-product h2 {
+  font-family: Roboto, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product h3 {
-  font-size: 18px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
   font-weight: normal;
   margin: 0;
 
-}.card-product h4 {
-  font-size: 16px;
+}
+.card-product h4 {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
   font-weight: normal;
   margin: 0;
 }

@@ -9,7 +9,7 @@
 </div>
 <cr>
 <cr>
-  <%= link_to "Affiche les articles", posts_path  %>
+  <%= link_to "Publier un commentaire", posts_path  %>
 <br>
   <ul>
     <% @posts.each do |post|  %>
@@ -23,19 +23,19 @@
           <%= image = "luca-bravo-XJXWbfSo2f0-unsplash_dwndza" %>
       <% end %>
       <li>
-        <%= link_to posts_path(post) do %>
         <div class="card-product">
           <%= cl_image_tag image, alt: "alttext", width: 300, height: 300, crop: :fill %>
           <div class="card-product-infos">
             <div>
-              <h2><%= post.title %></h2>
-              <h3><%= post.content %></h3>
+              <h2><%=post.title %></h2>
+              <h3><%=post.content %></h3>
             </div>
-            <h4><%= post.url %></h4>
+            <%= link_to posts_path(post) do %>
+              <h4><%=post.url %></h4>
+            <% end %>
           </div>
           <cr>
         </div>
-        <% end %>
       </li>
     <% end  %>
   </ul>
