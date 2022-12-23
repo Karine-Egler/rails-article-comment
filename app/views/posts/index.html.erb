@@ -1,0 +1,40 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dv8dkbyra/image/upload/v1671413563/nasa-Q1p7bh3SHj8-unsplash_upsgnm.jpg);">
+  <div class="container">
+    <h1>S'informer sur les innovations dand le monde de la <strong>High Tech</strong> !</h1>
+    <p>Les nouvelles du Monde Informatique</p>
+    <p><span data-controller="typed-js"></span></p>
+
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<cr>
+<cr>
+  <%= link_to "Affiche les articles", posts_path  %>
+<br>
+  <ul>
+    <% @posts.each do |post|  %>
+      <% if post.user_id == "Karine" %>
+        <%= image = "e1mwaajrjnlgqoqnotdp" %>
+        <% elsif post.user_id == "Valeria"%>
+          <%= image = "e1mwaajrjnlgqoqnotdp" %>
+        <% else %>
+          <%= image = "e1mwaajrjnlgqoqnotdp" %>
+      <% end %>
+      <li>
+        <%= link_to posts_path(post) do %>
+        <div class="card-trip">
+          <%= cl_image_tag image, alt: "alttext", width: 300, height: 300, crop: :fill %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= post.title %> - <%= post.content %></h2>
+            </div>
+            <h2 class="card-trip-pricing">$<%= post.url %></h2>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end  %>
+  </ul>
+  <br>
+  <%= link_to "Publier un avis", posts_path  %>
+</div>
