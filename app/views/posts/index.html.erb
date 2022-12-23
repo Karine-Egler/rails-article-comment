@@ -3,13 +3,14 @@
     <h1>S'informer sur les innovations dand le monde de la <strong>High Tech</strong> !</h1>
     <p>Les nouvelles du Monde Informatique</p>
     <p><span data-controller="typed-js"></span></p>
-
-    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
-<cr>
-<cr>
-  <%= link_to "Publier un commentaire", posts_path  %>
+<br>
+<br>
+<a>
+  <%= link_to "Publier votre commentaire", posts_path, class: "btn btn-gradient" %>
+</a>
+<br>
 <br>
   <ul>
     <% @posts.each do |post|  %>
@@ -40,5 +41,4 @@
     <% end  %>
   </ul>
   <br>
-  <%= link_to "Publier un avis", posts_path  %>
 </div>
